@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>python network 1</title>
+    </head>
+    <body>
+        <h1>urllib</h1>
+        <h2>request module</h2>
+            import urllib<br>
+            dir(urllib)<br>
+
+            from urllib import request<br>
+            the function that allows you to open specific url is the urlopen<br>
+
+            <b>to open the homepage for wikipedia <br><br></b>
+            resp = request.urlopen("https://www.wikipedia.org")<br>
+            type(resp)
+
+            to see what you can do with the response, use the dir function <b>dir(resp)</b><br>
+            to see if the request was a success, check the <br>
+            <b>resp code </b>it should be 200<br>
+            <b>resp.length</b> gives the size in bytes of the response and <br>
+            <b>resp.peer()</b> gives a short sniuppet of the response.<br>
+            data = resp.read()
+            type(data)
+            len(data)
+
+            <br>to decode this object <em>data </em> call the decode function on the character encoding of the object provided
+            by the resp.peek() under charset="utf-8 or something else"<br>
+            <b>html = data.decode("UTF-8")</b>
+
+            <H2>SENDING A SEARCH REQUEST TO GOOGLE. COM</H2>
+            resp = request.urlopen("https://www.google.com/search?q=socratica")
+
+            <h2>another search query/request</h2>
+            https://www.youtube.com/watch?v=EuC-yVzHhMI&t=5m56s
+
+            <ul>
+                <li>
+                    v = video id
+                </li>
+                <li>t = start time of video playback</li>
+
+            </ul>
+
+            to use the querys in a more efficient way <b>from urllib import parse</b><br>
+            <b>dir(parse)</b>
+            <br>
+            make a dictionary<br>
+            params = {"v": "EuC-yVzHhMI", "t": "5m56s"}<br>
+            queryString = parse.urlencode(params)<br>
+            queryString - output of the keyvalue pair in the query form<br
+
+            <h3>build the url</h3>
+            url = "https://www.youtube.com/watch" + "?" + queryString<br>
+            resp.isclosed() - check if your are still connected<br>
+            resp.code
+
+            html = resp.reap().decode("utf-8")<br>
+            html[:500]  - first 500 characters of the html
+        </body>
+</html>
