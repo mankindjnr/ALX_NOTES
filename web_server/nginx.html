@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>
+            NGINX
+        </title>
+    </head>
+    <body>
+        
+<h1>WHAT IS A WEB SERVER</h1>
+When you search for a website on your local machine, that info moves from your local amchine
+to a global area network. this is a HTTP GET REQUEST
+<br><br>
+The response from the global area network to your local machine is known as the 
+    response. The response contains the web page contents
+<br><br>
+the global area network sends your search qeries to a web server where it also gets
+    the response of your search and serves it to you. from the WEB SERVER
+<br><br>
+<h1>WEB SERVERS</h1>
+    are computers which deliver the requested web pages. Every web server has an IP address and a 
+    Domain name.
+<br><br>
+    Any computer can become a web server but there are applications needed to turn your machine to a web server.
+    This server softwares include nginx and others
+<h1>NGINX</h1> 
+    This is a web server used for reverse proxying, caching and load balancing.
+    <br><br>
+    it also provides HTTP server capabilities.
+    <br>
+    it is designed for maximum performance and stability.
+
+    <h2>Configuration Settings</h2>
+    The core settings of NGINX are mainly configured in the <b>nginx.conf file. </b>it is structured into contexts.
+    <br>
+    <h3>installation</h3>
+    <ul>
+        <li>update vm: sudo apt-get update</li>
+        <li>install: sudo apt-get install nginx</li>
+        <li>adjust firewall: sudo ufw enable</li>
+    </ul>
+    <h4>if firewall is not installed</h4>
+    <ul>
+        <li>sudo apt update</li>
+        <li>sudo apt install ufw</li>
+        <li>status check: sudo ufw status</li>
+        <li>enable if not active: sudo ufw enable</li>
+        <li>if need be, add rules i.e allow ssh connections: sudo ufw allow ssh</li>
+        <li>check status again to ensure rules are applied: sudo ufw status</li>
+    </ul>
+
+    <h1>How to Publish your webpages to your server</h1>
+    </body>
+</html>
