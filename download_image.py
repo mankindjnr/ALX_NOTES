@@ -15,9 +15,9 @@ with open('tommy.png', 'wb') as f:
 # to check if the output was correct - 200
 print(r.status_code)
 
-#return true that is less than 400 - if you get any server or client error then this
+#return true if it is less than 400 - if you get any server or client error then this
 # returns false - else its true - server and client errors are the most important
 print(r.ok)
 
 #more useful content
-print(r.header)
+#print(r.header)
